@@ -229,10 +229,6 @@ proxy-groups:
   - tc
   - chun
 rules:
-- DST-PORT,7895,REJECT
-- DST-PORT,7892,REJECT
-- SRC-IP-CIDR,192.168.0.2/32,DIRECT
-- SRC-IP-CIDR,198.18.0.1/32,DIRECT
 - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
 - RULE-SET,Reject,AdBlock
 - RULE-SET,Special,DIRECT
@@ -292,7 +288,6 @@ rules:
 dns:
   nameserver:
   - 8.8.8.8
-  - 8.8.4.4
   - 192.168.0.1
   - 114.114.114.114
   - 119.29.29.29
@@ -300,8 +295,6 @@ dns:
   - https://dns.alidns.com/dns-query
   fallback:
   - https://dns.cloudflare.com/dns-query
-  - tls://dns.google:853
-  - tls://8.8.8.8:853
   - https://public.dns.iij.jp/dns-query
   - https://jp.tiar.app/dns-query
   - https://jp.tiarap.org/dns-query
@@ -318,7 +311,6 @@ dns:
   - 192.168.0.1
   - 114.114.114.114
   - 119.29.29.29
-  - 8.8.4.4
 redir-port: 7892
 tproxy-port: 7895
 port: 7890
@@ -741,10 +733,3 @@ script:
 
         ctx.log('[Script] FINAL')
         return "Others"
-tun:
-  enable: true
-  stack: system
-  auto-route: false
-  auto-detect-interface: false
-  dns-hijack:
-  - tcp://any:53
