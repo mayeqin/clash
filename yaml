@@ -723,4 +723,4 @@ tun:
   auto-route: false
   auto-detect-interface: false
   dns-hijack:
-  - tcp://any:53
+  
