@@ -114,14 +114,6 @@ proxy-groups:
   - sp
   - tc
   - chun
-- name: HBO Max
-  type: select
-  proxies:
-  - Global TV
-  - DIRECT
-  - sp
-  - tc
-  - chun
 - name: HBO Go
   type: select
   proxies:
@@ -229,6 +221,10 @@ proxy-groups:
   - tc
   - chun
 rules:
+- DST-PORT,7895,REJECT
+- DST-PORT,7892,REJECT
+- SRC-IP-CIDR,192.168.0.2/32,DIRECT
+- SRC-IP-CIDR,198.18.0.1/32,DIRECT
 - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
 - RULE-SET,Reject,AdBlock
 - RULE-SET,Special,DIRECT
@@ -256,8 +252,6 @@ rules:
 - RULE-SET,encoreTVB,Global TV
 - RULE-SET,Fox Now,Global TV
 - RULE-SET,Fox+,Global TV
-- RULE-SET,HBO Go,HBO Go
-- RULE-SET,HBO Max,HBO Max
 - RULE-SET,Hulu Japan,Global TV
 - RULE-SET,Hulu,Global TV
 - RULE-SET,Japonx,Global TV
@@ -288,6 +282,7 @@ rules:
 dns:
   nameserver:
   - 8.8.8.8
+  - 8.8.4.4
   - 192.168.0.1
   - 114.114.114.114
   - 119.29.29.29
@@ -295,6 +290,8 @@ dns:
   - https://dns.alidns.com/dns-query
   fallback:
   - https://dns.cloudflare.com/dns-query
+  - tls://dns.google:853
+  - tls://8.8.8.8:853
   - https://public.dns.iij.jp/dns-query
   - https://jp.tiar.app/dns-query
   - https://jp.tiarap.org/dns-query
@@ -311,6 +308,7 @@ dns:
   - 192.168.0.1
   - 114.114.114.114
   - 119.29.29.29
+  - 8.8.4.4
 redir-port: 7892
 tproxy-port: 7895
 port: 7890
@@ -483,18 +481,6 @@ rule-providers:
     behavior: classical
     url: https://raw.dler.io/main/Clash/Provider/Media/Fox%2B.yaml
     path: "./rule_provider/Fox+"
-    interval: 86400
-  HBO Go:
-    type: http
-    behavior: classical
-    url: https://raw.dler.io/main/Clash/Provider/Media/HBO%20Go.yaml
-    path: "./rule_provider/HBO_Go"
-    interval: 86400
-  HBO Max:
-    type: http
-    behavior: classical
-    url: https://raw.dler.io/main/Clash/Provider/Media/HBO%20Max.yaml
-    path: "./rule_provider/HBO_Max"
     interval: 86400
   Hulu Japan:
     type: http
@@ -675,8 +661,6 @@ script:
             "encoreTVB": "Global TV",
             "Fox Now": "Global TV",
             "Fox+": "Global TV",
-            "HBO Go": "HBO Go",
-            "HBO Max": "HBO Max",
             "Hulu Japan": "Global TV",
             "Hulu": "Global TV",
             "Japonx": "Global TV",
@@ -733,3 +717,10 @@ script:
 
         ctx.log('[Script] FINAL')
         return "Others"
+tun:
+  enable: true
+  stack: system
+  auto-route: false
+  auto-detect-interface: false
+  dns-hijack:
+  - tcp://any:53
