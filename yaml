@@ -7,9 +7,9 @@ proxies:
   uuid: 1a182e87-40b4-41b3-bbfd-cfa7350b2243
   alterId: 0
   cipher: auto
-  udp: false
+  udp: true
   skip-cert-verify: true
-  tls: false
+  tls: true
 - name: tc
   type: vmess
   server: tc.mario-web.live
@@ -17,9 +17,9 @@ proxies:
   uuid: 4f23fc01-bc57-490e-bdc4-8ba816e8978e
   alterId: 0
   cipher: auto
-  udp: false
-  skip-cert-verify: true
-  tls: false
+  udp: true
+  skip-cert-verify: false
+  tls: true
 - name: or
   type: trojan
   server: or.mario-web.live
