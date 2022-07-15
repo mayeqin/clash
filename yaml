@@ -27,11 +27,11 @@ proxies:
   password: sn8ugrDF6C
   udp: false
   skip-cert-verify: true
-- name: si
+- name: chun
   type: trojan
-  server: si.mario-web.live
+  server: chun.mario-web.live
   port: 443
-  password: GA8kGUM7sb
+  password: NjJjoUWYs1
   udp: false
   skip-cert-verify: true
 proxy-groups:
@@ -41,7 +41,7 @@ proxy-groups:
   - sp
   - tc
   - or
-  - si
+  - chun
   url: https://cp.cloudflare.com/generate_204
   interval: '600'
   tolerance: '150'
@@ -53,7 +53,7 @@ proxy-groups:
   - sp
   - tc
   - or
-  - si
+  - chun
 - name: Domestic
   type: select
   proxies:
@@ -65,6 +65,162 @@ proxy-groups:
   - Proxy
   - DIRECT
   - Domestic
+- name: Microsoft
+  type: select
+  proxies:
+  - DIRECT
+  - Proxy
+- name: Apple
+  type: select
+  proxies:
+  - DIRECT
+  - Proxy
+  - sp
+  - tc
+  - or
+  - chun
+- name: Google FCM
+  type: select
+  proxies:
+  - DIRECT
+  - Proxy
+  - sp
+  - tc
+  - or
+  - chun
+- name: Scholar
+  type: select
+  proxies:
+  - DIRECT
+  - Proxy
+  - sp
+  - tc
+  - or
+  - chun
+- name: Bilibili
+  type: select
+  proxies:
+  - Asian TV
+  - DIRECT
+  - sp
+  - tc
+  - or
+  - chun
+- name: Douyin
+  type: select
+  proxies:
+  - DIRECT
+  - Asian TV
+  - sp
+  - tc
+  - or
+  - chun
+- name: Bahamut
+  type: select
+  proxies:
+  - Global TV
+  - DIRECT
+  - sp
+  - tc
+  - or
+  - chun
+- name: HBO Max
+  type: select
+  proxies:
+  - Global TV
+  - DIRECT
+  - sp
+  - tc
+  - or
+  - chun
+- name: HBO Go
+  type: select
+  proxies:
+  - Global TV
+  - DIRECT
+  - sp
+  - tc
+  - or
+  - chun
+- name: Pornhub
+  type: select
+  proxies:
+  - Global TV
+  - DIRECT
+  - sp
+  - tc
+  - or
+  - chun
+- name: Netflix
+  type: select
+  proxies:
+  - Global TV
+  - DIRECT
+  - sp
+  - tc
+  - or
+  - chun
+- name: Disney
+  type: select
+  proxies:
+  - Global TV
+  - DIRECT
+  - sp
+  - tc
+  - or
+  - chun
+- name: Youtube
+  type: select
+  disable-udp: true
+  proxies:
+  - Global TV
+  - DIRECT
+  - sp
+  - tc
+  - or
+  - chun
+- name: Discovery Plus
+  type: select
+  proxies:
+  - Global TV
+  - DIRECT
+  - sp
+  - tc
+  - or
+  - chun
+- name: DAZN
+  type: select
+  proxies:
+  - Global TV
+  - DIRECT
+  - sp
+  - tc
+  - or
+  - chun
+- name: Spotify
+  type: select
+  proxies:
+  - Global TV
+  - DIRECT
+  - sp
+  - tc
+  - or
+  - chun
+- name: Steam
+  type: select
+  proxies:
+  - DIRECT
+  - Proxy
+  - sp
+  - tc
+  - or
+  - chun
+- name: AdBlock
+  type: select
+  proxies:
+  - REJECT
+  - DIRECT
+  - Proxy
 - name: Asian TV
   type: select
   proxies:
@@ -73,7 +229,7 @@ proxy-groups:
   - sp
   - tc
   - or
-  - si
+  - chun
 - name: Global TV
   type: select
   proxies:
@@ -82,7 +238,43 @@ proxy-groups:
   - sp
   - tc
   - or
-  - si
+  - chun
+- name: Speedtest
+  type: select
+  proxies:
+  - Proxy
+  - DIRECT
+  - sp
+  - tc
+  - or
+  - chun
+- name: Telegram
+  type: select
+  proxies:
+  - Proxy
+  - DIRECT
+  - sp
+  - tc
+  - or
+  - chun
+- name: Crypto
+  type: select
+  proxies:
+  - Proxy
+  - DIRECT
+  - sp
+  - tc
+  - or
+  - chun
+- name: PayPal
+  type: select
+  proxies:
+  - DIRECT
+  - Proxy
+  - sp
+  - tc
+  - or
+  - chun
 redir-port: 7892
 tproxy-port: 7895
 port: 7890
@@ -124,6 +316,13 @@ dns:
   - "+.*"
 experimental:
   sniff-tls-sni: true
+tun:
+  enable: true
+  stack: system
+  auto-route: false
+  auto-detect-interface: false
+  dns-hijack:
+  - tcp://any:53
 profile:
   store-selected: true
   store-fake-ip: true
