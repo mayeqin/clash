@@ -1,378 +1,279 @@
----
 proxies:
-- name: sp
-  type: vmess
-  server: sp.mario-web.live
-  port: 443
-  uuid: 1a182e87-40b4-41b3-bbfd-cfa7350b2243
-  alterId: 0
-  cipher: auto
-  udp: true
-  skip-cert-verify: true
-  tls: true
-- name: tc
-  type: vmess
-  server: tc.mario-web.live
-  port: 443
-  uuid: 4f23fc01-bc57-490e-bdc4-8ba816e8978e
-  alterId: 0
-  cipher: auto
-  udp: true
-  skip-cert-verify: false
-  tls: true
-- name: or
-  type: trojan
-  server: or.mario-web.live
-  port: 443
-  password: sn8ugrDF6C
-  udp: false
-  skip-cert-verify: true
-- name: chun
-  type: trojan
-  server: chun.mario-web.live
-  port: 443
-  password: NjJjoUWYs1
-  udp: false
-  skip-cert-verify: true
+  - name: "sp"
+    type: vmess
+    server: "sp.mario-web.live"
+    port: 443
+    uuid: 1a182e87-40b4-41b3-bbfd-cfa7350b2243
+    alterId: 0
+    cipher: auto
+    udp: true
+    skip-cert-verify: true
+    tls: true
+    
+  - name: "tc"
+    type: vmess
+    server: "tc.mario-web.live"
+    port: 443
+    uuid: 4f23fc01-bc57-490e-bdc4-8ba816e8978e
+    alterId: 0
+    cipher: auto
+    udp: true
+    skip-cert-verify: true
+    tls: true
+    
+  - name: "or"
+    type: trojan
+    server: "or.mario-web.live"
+    port: 443
+    password: "sn8ugrDF6C"
+    udp: true
+    skip-cert-verify: true
+  - name: "chun"
+    type: trojan
+    server: "chun.mario-web.live"
+    port: 443
+    password: "NjJjoUWYs1"
+    udp: true
+    skip-cert-verify: true
 proxy-groups:
-- name: Auto - UrlTest
-  type: url-test
-  proxies:
-  - sp
-  - tc
-  - or
-  - chun
-  url: https://cp.cloudflare.com/generate_204
-  interval: '600'
-  tolerance: '150'
-- name: Proxy
-  type: select
-  proxies:
-  - Auto - UrlTest
-  - DIRECT
-  - sp
-  - tc
-  - or
-  - chun
-- name: Domestic
-  type: select
-  proxies:
-  - DIRECT
-  - Proxy
-- name: Others
-  type: select
-  proxies:
-  - Proxy
-  - DIRECT
-  - Domestic
-- name: Microsoft
-  type: select
-  proxies:
-  - DIRECT
-  - Proxy
-- name: Apple
-  type: select
-  proxies:
-  - DIRECT
-  - Proxy
-  - sp
-  - tc
-  - or
-  - chun
-- name: Google FCM
-  type: select
-  proxies:
-  - DIRECT
-  - Proxy
-  - sp
-  - tc
-  - or
-  - chun
-- name: Scholar
-  type: select
-  proxies:
-  - DIRECT
-  - Proxy
-  - sp
-  - tc
-  - or
-  - chun
-- name: Bilibili
-  type: select
-  proxies:
-  - Asian TV
-  - DIRECT
-  - sp
-  - tc
-  - or
-  - chun
-- name: Douyin
-  type: select
-  proxies:
-  - DIRECT
-  - Asian TV
-  - sp
-  - tc
-  - or
-  - chun
-- name: Bahamut
-  type: select
-  proxies:
-  - Global TV
-  - DIRECT
-  - sp
-  - tc
-  - or
-  - chun
-- name: HBO Max
-  type: select
-  proxies:
-  - Global TV
-  - DIRECT
-  - sp
-  - tc
-  - or
-  - chun
-- name: HBO Go
-  type: select
-  proxies:
-  - Global TV
-  - DIRECT
-  - sp
-  - tc
-  - or
-  - chun
-- name: Pornhub
-  type: select
-  proxies:
-  - Global TV
-  - DIRECT
-  - sp
-  - tc
-  - or
-  - chun
-- name: Netflix
-  type: select
-  proxies:
-  - Global TV
-  - DIRECT
-  - sp
-  - tc
-  - or
-  - chun
-- name: Disney
-  type: select
-  proxies:
-  - Global TV
-  - DIRECT
-  - sp
-  - tc
-  - or
-  - chun
-- name: Youtube
-  type: select
-  disable-udp: true
-  proxies:
-  - Global TV
-  - DIRECT
-  - sp
-  - tc
-  - or
-  - chun
-- name: Discovery Plus
-  type: select
-  proxies:
-  - Global TV
-  - DIRECT
-  - sp
-  - tc
-  - or
-  - chun
-- name: DAZN
-  type: select
-  proxies:
-  - Global TV
-  - DIRECT
-  - sp
-  - tc
-  - or
-  - chun
-- name: Spotify
-  type: select
-  proxies:
-  - Global TV
-  - DIRECT
-  - sp
-  - tc
-  - or
-  - chun
-- name: Steam
-  type: select
-  proxies:
-  - DIRECT
-  - Proxy
-  - sp
-  - tc
-  - or
-  - chun
-- name: AdBlock
-  type: select
-  proxies:
-  - REJECT
-  - DIRECT
-  - Proxy
-- name: Asian TV
-  type: select
-  proxies:
-  - DIRECT
-  - Proxy
-  - sp
-  - tc
-  - or
-  - chun
-- name: Global TV
-  type: select
-  proxies:
-  - Proxy
-  - DIRECT
-  - sp
-  - tc
-  - or
-  - chun
-- name: Speedtest
-  type: select
-  proxies:
-  - Proxy
-  - DIRECT
-  - sp
-  - tc
-  - or
-  - chun
-- name: Telegram
-  type: select
-  proxies:
-  - Proxy
-  - DIRECT
-  - sp
-  - tc
-  - or
-  - chun
-- name: Crypto
-  type: select
-  proxies:
-  - Proxy
-  - DIRECT
-  - sp
-  - tc
-  - or
-  - chun
-- name: PayPal
-  type: select
-  proxies:
-  - DIRECT
-  - Proxy
-  - sp
-  - tc
-  - or
-  - chun
-redir-port: 7892
-tproxy-port: 7895
-port: 7890
-socks-port: 7891
-mixed-port: 7893
-mode: rule
-log-level: silent
-allow-lan: true
-external-controller: 0.0.0.0:9090
-secret: '123456'
-bind-address: "*"
-external-ui: "/usr/share/openclash/ui"
-ipv6: false
-dns:
-  enable: true
-  ipv6: false
-  enhanced-mode: fake-ip
-  fake-ip-range: 198.18.0.1/16
-  listen: 0.0.0.0:7874
-  nameserver:
-  - 8.8.8.8
-  - 192.168.0.1
-  - 114.114.114.114
-  - 119.29.29.29
-  - https://doh.pub/dns-query
-  - https://dns.alidns.com/dns-query
-  fallback:
-  - https://dns.cloudflare.com/dns-query
-  - https://public.dns.iij.jp/dns-query
-  - https://jp.tiar.app/dns-query
-  - https://jp.tiarap.org/dns-query
-  - tls://dot.tiar.app
-  default-nameserver:
-  - 8.8.8.8
-  - 192.168.0.1
-  - 114.114.114.114
-  - 119.29.29.29
-  fake-ip-filter:
-  - "+.*"
-experimental:
-  sniff-tls-sni: true
-tun:
-  enable: true
-  stack: system
-  auto-route: false
-  auto-detect-interface: false
-  dns-hijack:
-  - tcp://any:53
-profile:
-  store-selected: true
-  store-fake-ip: true
-rule-providers:
-  Unbreak:
-    type: http
-    behavior: classical
-    path: "./rule_provider/Unbreak.yaml"
-    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Unbreak.yaml
-    interval: 86400
-  Streaming:
-    type: http
-    behavior: classical
-    path: "./rule_provider/Streaming.yaml"
-    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/StreamingMedia/Streaming.yaml
-    interval: 86400
-  StreamingSE:
-    type: http
-    behavior: classical
-    path: "./rule_provider/StreamingSE.yaml"
-    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/StreamingMedia/StreamingSE.yaml
-    interval: 86400
-  Global:
-    type: http
-    behavior: classical
-    path: "./rule_provider/Global.yaml"
-    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Global.yaml
-    interval: 86400
-  China:
-    type: http
-    behavior: classical
-    path: "./rule_provider/China.yaml"
-    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/China.yaml
-    interval: 86400
+  - name: Auto - UrlTest
+    type: url-test
+    proxies:
+      - "sp"
+      - "tc"
+      - "or"
+      - "chun"
+    url: https://cp.cloudflare.com/generate_204
+    interval: "600"
+    tolerance: "150"
+  - name: Proxy
+    type: select
+    proxies:
+      - Auto - UrlTest
+      - DIRECT
+      - "sp"
+      - "tc"
+      - "or"
+      - "chun"
+  - name: Domestic
+    type: select
+    proxies:
+      - DIRECT
+      - Proxy
+  - name: Others
+    type: select
+    proxies:
+      - Proxy
+      - DIRECT
+      - Domestic
+  - name: Microsoft
+    type: select
+    proxies:
+      - DIRECT
+      - Proxy
+  - name: Apple
+    type: select
+    proxies:
+      - DIRECT
+      - Proxy
+      - "sp"
+      - "tc"
+      - "or"
+      - "chun"
+  - name: Google FCM
+    type: select
+    proxies:
+      - DIRECT
+      - Proxy
+      - "sp"
+      - "tc"
+      - "or"
+      - "chun"
+  - name: Scholar
+    type: select
+    proxies:
+      - DIRECT
+      - Proxy
+      - "sp"
+      - "tc"
+      - "or"
+      - "chun"
+  - name: Bilibili
+    type: select
+    proxies:
+      - Asian TV
+      - DIRECT
+      - "sp"
+      - "tc"
+      - "or"
+      - "chun"
+  - name: Douyin
+    type: select
+    proxies:
+      - DIRECT
+      - Asian TV
+      - "sp"
+      - "tc"
+      - "or"
+      - "chun"
+  - name: Bahamut
+    type: select
+    proxies:
+      - Global TV
+      - DIRECT
+      - "sp"
+      - "tc"
+      - "or"
+      - "chun"
+  - name: HBO Max
+    type: select
+    proxies:
+      - Global TV
+      - DIRECT
+      - "sp"
+      - "tc"
+      - "or"
+      - "chun"
+  - name: HBO Go
+    type: select
+    proxies:
+      - Global TV
+      - DIRECT
+      - "sp"
+      - "tc"
+      - "or"
+      - "chun"
+  - name: Pornhub
+    type: select
+    proxies:
+      - Global TV
+      - DIRECT
+      - "sp"
+      - "tc"
+      - "or"
+      - "chun"
+  - name: Netflix
+    type: select
+    proxies:
+      - Global TV
+      - DIRECT
+      - "sp"
+      - "tc"
+      - "or"
+      - "chun"
+  - name: Disney
+    type: select
+    proxies:
+      - Global TV
+      - DIRECT
+      - "sp"
+      - "tc"
+      - "or"
+      - "chun"
+  - name: Youtube
+    type: select
+    disable-udp: true
+    proxies:
+      - Global TV
+      - DIRECT
+      - "sp"
+      - "tc"
+      - "or"
+      - "chun"
+  - name: Discovery Plus
+    type: select
+    proxies:
+      - Global TV
+      - DIRECT
+      - "sp"
+      - "tc"
+      - "or"
+      - "chun"
+  - name: DAZN
+    type: select
+    proxies:
+      - Global TV
+      - DIRECT
+      - "sp"
+      - "tc"
+      - "or"
+      - "chun"
+  - name: Spotify
+    type: select
+    proxies:
+      - Global TV
+      - DIRECT
+      - "sp"
+      - "tc"
+      - "or"
+      - "chun"
+  - name: Steam
+    type: select
+    proxies:
+      - DIRECT
+      - Proxy
+      - "sp"
+      - "tc"
+      - "or"
+      - "chun"
+  - name: AdBlock
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+      - Proxy
+  - name: Asian TV
+    type: select
+    proxies:
+      - DIRECT
+      - Proxy
+      - "sp"
+      - "tc"
+      - "or"
+      - "chun"
+  - name: Global TV
+    type: select
+    proxies:
+      - Proxy
+      - DIRECT
+      - "sp"
+      - "tc"
+      - "or"
+      - "chun"
+  - name: Speedtest
+    type: select
+    proxies:
+      - Proxy
+      - DIRECT
+      - "sp"
+      - "tc"
+      - "or"
+      - "chun"
+  - name: Telegram
+    type: select
+    proxies:
+      - Proxy
+      - DIRECT
+      - "sp"
+      - "tc"
+      - "or"
+      - "chun"
+  - name: Crypto
+    type: select
+    proxies:
+      - Proxy
+      - DIRECT
+      - "sp"
+      - "tc"
+      - "or"
+      - "chun"
+  - name: PayPal
+    type: select
+    proxies:
+      - DIRECT
+      - Proxy
+      - "sp"
+      - "tc"
+      - "or"
+      - "chun"
 rules:
-- DST-PORT,7895,REJECT
-- DST-PORT,7892,REJECT
-- IP-CIDR,198.18.0.1/16,REJECT,no-resolve
-- RULE-SET,Unbreak,DIRECT
-- RULE-SET,Streaming,Global TV
-- RULE-SET,StreamingSE,Asian TV
-- RULE-SET,Global,Proxy
-- RULE-SET,China,Domestic
-- IP-CIDR,192.168.0.0/16,DIRECT
-- IP-CIDR,10.0.0.0/8,DIRECT
-- IP-CIDR,172.16.0.0/12,DIRECT
-- IP-CIDR,127.0.0.0/8,DIRECT
-- IP-CIDR,100.64.0.0/10,DIRECT
-- IP-CIDR,224.0.0.0/4,DIRECT
-- IP-CIDR,fe80::/10,DIRECT
-- IP-CIDR,119.28.28.28/32,DIRECT
-- IP-CIDR,182.254.116.0/24,DIRECT
-- MATCH,Others
