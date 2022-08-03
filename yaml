@@ -1,15 +1,4 @@
 proxies:
-  - name: "sp"
-    type: vmess
-    server: "sp.mario-web.live"
-    port: 443
-    uuid: 1a182e87-40b4-41b3-bbfd-cfa7350b2243
-    alterId: 0
-    cipher: auto
-    udp: true
-    skip-cert-verify: true
-    tls: true
-    
   - name: "tc"
     type: vmess
     server: "tc.mario-web.live"
@@ -35,14 +24,24 @@ proxies:
     password: "NjJjoUWYs1"
     udp: true
     skip-cert-verify: true
+  - name: "sp"
+    type: vmess
+    server: "sp.mario-web.live"
+    port: 443
+    uuid: bf2efccc-a96c-41e1-c9ba-496115edf207
+    alterId: 0
+    cipher: auto
+    udp: true
+    skip-cert-verify: true
+    tls: true
 proxy-groups:
   - name: Auto - UrlTest
     type: url-test
     proxies:
-      - "sp"
       - "tc"
       - "or"
       - "chun"
+      - "sp"
     url: https://cp.cloudflare.com/generate_204
     interval: "600"
     tolerance: "150"
@@ -51,10 +50,10 @@ proxy-groups:
     proxies:
       - Auto - UrlTest
       - DIRECT
-      - "sp"
       - "tc"
       - "or"
       - "chun"
+      - "sp"
   - name: Domestic
     type: select
     proxies:
@@ -76,146 +75,146 @@ proxy-groups:
     proxies:
       - DIRECT
       - Proxy
-      - "sp"
       - "tc"
       - "or"
       - "chun"
+      - "sp"
   - name: Google FCM
     type: select
     proxies:
       - DIRECT
       - Proxy
-      - "sp"
       - "tc"
       - "or"
       - "chun"
+      - "sp"
   - name: Scholar
     type: select
     proxies:
       - DIRECT
       - Proxy
-      - "sp"
       - "tc"
       - "or"
       - "chun"
+      - "sp"
   - name: Bilibili
     type: select
     proxies:
       - Asian TV
       - DIRECT
-      - "sp"
       - "tc"
       - "or"
       - "chun"
+      - "sp"
   - name: Douyin
     type: select
     proxies:
       - DIRECT
       - Asian TV
-      - "sp"
       - "tc"
       - "or"
       - "chun"
+      - "sp"
   - name: Bahamut
     type: select
     proxies:
       - Global TV
       - DIRECT
-      - "sp"
       - "tc"
       - "or"
       - "chun"
+      - "sp"
   - name: HBO Max
     type: select
     proxies:
       - Global TV
       - DIRECT
-      - "sp"
       - "tc"
       - "or"
       - "chun"
+      - "sp"
   - name: HBO Go
     type: select
     proxies:
       - Global TV
       - DIRECT
-      - "sp"
       - "tc"
       - "or"
       - "chun"
+      - "sp"
   - name: Pornhub
     type: select
     proxies:
       - Global TV
       - DIRECT
-      - "sp"
       - "tc"
       - "or"
       - "chun"
+      - "sp"
   - name: Netflix
     type: select
     proxies:
       - Global TV
       - DIRECT
-      - "sp"
       - "tc"
       - "or"
       - "chun"
+      - "sp"
   - name: Disney
     type: select
     proxies:
       - Global TV
       - DIRECT
-      - "sp"
       - "tc"
       - "or"
       - "chun"
+      - "sp"
   - name: Youtube
     type: select
     disable-udp: true
     proxies:
       - Global TV
       - DIRECT
-      - "sp"
       - "tc"
       - "or"
       - "chun"
+      - "sp"
   - name: Discovery Plus
     type: select
     proxies:
       - Global TV
       - DIRECT
-      - "sp"
       - "tc"
       - "or"
       - "chun"
+      - "sp"
   - name: DAZN
     type: select
     proxies:
       - Global TV
       - DIRECT
-      - "sp"
       - "tc"
       - "or"
       - "chun"
+      - "sp"
   - name: Spotify
     type: select
     proxies:
       - Global TV
       - DIRECT
-      - "sp"
       - "tc"
       - "or"
       - "chun"
+      - "sp"
   - name: Steam
     type: select
     proxies:
       - DIRECT
       - Proxy
-      - "sp"
       - "tc"
       - "or"
       - "chun"
+      - "sp"
   - name: AdBlock
     type: select
     proxies:
@@ -227,53 +226,53 @@ proxy-groups:
     proxies:
       - DIRECT
       - Proxy
-      - "sp"
       - "tc"
       - "or"
       - "chun"
+      - "sp"
   - name: Global TV
     type: select
     proxies:
       - Proxy
       - DIRECT
-      - "sp"
       - "tc"
       - "or"
       - "chun"
+      - "sp"
   - name: Speedtest
     type: select
     proxies:
       - Proxy
       - DIRECT
-      - "sp"
       - "tc"
       - "or"
       - "chun"
+      - "sp"
   - name: Telegram
     type: select
     proxies:
       - Proxy
       - DIRECT
-      - "sp"
       - "tc"
       - "or"
       - "chun"
+      - "sp"
   - name: Crypto
     type: select
     proxies:
       - Proxy
       - DIRECT
-      - "sp"
       - "tc"
       - "or"
       - "chun"
+      - "sp"
   - name: PayPal
     type: select
     proxies:
       - DIRECT
       - Proxy
-      - "sp"
       - "tc"
       - "or"
       - "chun"
+      - "sp"
 rules:
