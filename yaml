@@ -42,7 +42,7 @@ proxy-groups:
   - bw
   - or
   - chun
-  url: http://detectportal.firefox.com/success.txt 
+  url: http://captive.apple.com/ 
   interval: '600'
   tolerance: '100'
 - name: Proxy
