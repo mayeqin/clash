@@ -42,7 +42,7 @@ proxy-groups:
   - bw
   - or
   - chun
-  url: http://captive.apple.com/ 
+  url: https://cp.cloudflare.com/generate_204
   interval: '600'
   tolerance: '100'
 - name: Proxy
