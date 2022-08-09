@@ -42,9 +42,9 @@ proxy-groups:
   - bw
   - or
   - chun
-  url: http://www.gstatic.com/generate_204
-  interval: '600'
-  tolerance: '100'
+  url: 'http://www.gstatic.com/generate_204'
+  interval: '300'
+  tolerance: '50'
 - name: Proxy
   type: select
   proxies:
