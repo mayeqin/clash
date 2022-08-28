@@ -1,4 +1,27 @@
+---
 proxies:
+- name: or
+  type: trojan
+  server: 152.69.213.120
+  port: 443
+  password: NLmRckPLGAU1dFEB
+  udp: true
+  sni: or.mario-web.live
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: "/kDJVuqk8g"
+- name: chun
+  type: trojan
+  server: 144.24.91.108
+  port: 443
+  password: 8VMpZ5plQ6CiLNv6
+  udp: true
+  sni: chun.mario-web.live
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: "/MUfAg9tgJJPP"
 - name: sp
   type: vmess
   server: sp.mario-web.live
@@ -12,28 +35,6 @@ proxies:
   network: ws
   ws-opts:
     path: "/afjjuhwet"
-- name: "or"
-  type: trojan
-  server: "152.69.213.120"
-  port: 443
-  password: "NLmRckPLGAU1dFEB"
-  udp: true
-  sni: "or.mario-web.live"
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-     path: "/kDJVuqk8g"
-- name: "chun"
-  type: trojan
-  server: "144.24.91.108"
-  port: 443
-  password: "8VMpZ5plQ6CiLNv6"
-  udp: true
-  sni: "chun.mario-web.live"
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: "/MUfAg9tgJJPP"
 proxy-groups:
   - name: 🚀 节点选择
     type: select
