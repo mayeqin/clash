@@ -1,5 +1,6 @@
 proxies:
-- type: trojan
+- name: "sp"
+  type: trojan
   server: "45.150.164.228"
   port: 443
   password: "963ErF8Nu72qjeXg"
