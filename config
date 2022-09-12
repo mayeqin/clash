@@ -1,17 +1,14 @@
 proxies:
-- name: sp
-  type: vmess
-  server: sp.mario-web.live
+- type: trojan
+  server: "45.150.164.228"
   port: 443
-  uuid: c79d9141-c9a1-4954-d697-0111f40ba092
-  alterId: 0
-  cipher: auto
+  password: "963ErF8Nu72qjeXg"
   udp: true
+  sni: "sp.mario-web.live"
   skip-cert-verify: false
-  tls: true
   network: ws
   ws-opts:
-    path: "/afjjuhwet"
+     path: "/G2MwPA7ev"
 - name: "or"
   type: trojan
   server: "152.69.213.120"
