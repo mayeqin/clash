@@ -10,7 +10,7 @@ proxies:
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: "/kDJVuqk8g"
+  path: "/kDJVuqk8g"
 - name: chun
   type: trojan
   server: 144.24.91.108
@@ -21,7 +21,7 @@ proxies:
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: "/MUfAg9tgJJPP"
+  path: "/MUfAg9tgJJPP"
 - name: sh
   type: trojan
   server: 43.226.24.124
@@ -32,7 +32,7 @@ proxies:
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: "/9kBbYzQ"
+  path: "/9kBbYzQ"
 - name: bw
   type: trojan
   server: 65.49.203.33
@@ -43,8 +43,8 @@ proxies:
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: "/37NTNgkan"
-proxy-groups:
+  path: "/37NTNgkan"
+  proxy-groups:
 - name: Auto - UrlTest
   type: url-test
   proxies:
