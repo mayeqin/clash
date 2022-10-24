@@ -44,28 +44,32 @@ proxies:
   network: ws
   ws-opts:
     path: "/MUfAg9tgJJPP"
-- name: sh
-  type: trojan
-  server: 43.226.24.124
-  port: 443
-  password: o9mMoK1nBgCJpzb9
-  udp: true
-  sni: sh.mario-web.live
-  skip-cert-verify: false
+- name: vsp
+  type: vmess
+  server: 45.150.164.228
+  port: 5521
+  uuid: b340da2b-ba58-4221-ba4b-3255d255bfc3
+  alterId: 0
+  cipher: auto
+  udp: false
+  skip-cert-verify: true
+  tls: false
   network: ws
   ws-opts:
-    path: "/9kBbYzQ"
+    path: "/dfgrw"
 - name: bw
-  type: trojan
+  type: vmess
   server: 65.49.203.33
-  port: 443
-  password: eD2znrc3baY0PaDY
-  udp: true
-  sni: bw.mario-web.live
-  skip-cert-verify: false
+  port: 18910
+  uuid: c7df71fb-805e-42e7-ccff-097611510117
+  alterId: 0
+  cipher: auto
+  udp: false
+  skip-cert-verify: true
+  tls: true
   network: ws
   ws-opts:
-    path: "/37NTNgkan"
+    path: "/asdff"
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -75,7 +79,7 @@ proxy-groups:
       - DIRECT
       - or
       - chun
-      - sh
+      - vsp
       - bw
   - name: ♻️ 自动选择
     type: url-test
@@ -94,7 +98,7 @@ proxy-groups:
     proxies:
       - or
       - chun
-      - sh
+      - vsp
       - bw
   - name: 🎯 全球直连
     type: select
@@ -116,7 +120,7 @@ proxy-groups:
       - 🔯 故障转移
       - or
       - chun
-      - sh
+      - vsp
       - bw
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
