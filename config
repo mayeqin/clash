@@ -89,7 +89,7 @@ proxy-groups:
     proxies:
       - or
       - chun
-      - sh
+      - vsp
       - bw
   - name: 🔯 故障转移
     type: fallback
