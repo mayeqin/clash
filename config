@@ -57,19 +57,19 @@ proxies:
   network: ws
   ws-opts:
     path: "/dfgrw"
-- name: bw
+- name: vtp
   type: vmess
-  server: 65.49.203.33
-  port: 18910
-  uuid: c7df71fb-805e-42e7-ccff-097611510117
+  server: 45.32.73.174
+  port: 5623
+  uuid: 535be93a-2d4f-40a5-b776-a420635a30c9
   alterId: 0
   cipher: auto
   udp: false
   skip-cert-verify: true
-  tls: true
+  tls: false
   network: ws
   ws-opts:
-    path: "/asdff"
+    path: "/hginn"
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -80,7 +80,7 @@ proxy-groups:
       - or
       - chun
       - vsp
-      - bw
+      - vtp
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -90,7 +90,7 @@ proxy-groups:
       - or
       - chun
       - vsp
-      - bw
+      - vtp
   - name: 🔯 故障转移
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -99,7 +99,7 @@ proxy-groups:
       - or
       - chun
       - vsp
-      - bw
+      - vtp
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -121,7 +121,7 @@ proxy-groups:
       - or
       - chun
       - vsp
-      - bw
+      - vtp
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
