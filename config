@@ -24,19 +24,19 @@ dns:
 proxies:
 - name: or
   type: trojan
-  server: 152.69.213.120
-  port: 443
-  password: NLmRckPLGAU1dFEB
+  server: 152.69.215.151
+  port: 61582
+  password: nnoWpceGfYKKL0KB
   udp: true
   sni: or.mario-web.live
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: "/kDJVuqk8g"
+    path: "/tc9WEQP"
 - name: chun
   type: trojan
   server: 144.24.91.108
-  port: 443
+  port: 60555
   password: 8VMpZ5plQ6CiLNv6
   udp: true
   sni: chun.mario-web.live
