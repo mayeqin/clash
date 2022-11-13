@@ -44,7 +44,7 @@ proxies:
   network: ws
   ws-opts:
     path: "/MUfAg9tgJJPP"
-- name: vsp
+- name: sp
   type: vmess
   server: 45.150.164.228
   port: 5521
@@ -57,7 +57,7 @@ proxies:
   network: ws
   ws-opts:
     path: "/dfgrw"
-- name: vtp
+- name: vt
   type: vmess
   server: 45.32.73.174
   port: 5623
@@ -79,8 +79,8 @@ proxy-groups:
       - DIRECT
       - or
       - chun
-      - vsp
-      - vtp
+      - sp
+      - vt
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -89,8 +89,8 @@ proxy-groups:
     proxies:
       - or
       - chun
-      - vsp
-      - vtp
+      - sp
+      - vt
   - name: 🔯 故障转移
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -98,8 +98,8 @@ proxy-groups:
     proxies:
       - or
       - chun
-      - vsp
-      - vtp
+      - sp
+      - vt
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -120,8 +120,8 @@ proxy-groups:
       - 🔯 故障转移
       - or
       - chun
-      - vsp
-      - vtp
+      - sp
+      - vt
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
