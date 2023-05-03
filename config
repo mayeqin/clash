@@ -21,7 +21,8 @@ dns:
     - tls://dns.google:853
 
 proxies:
-  - {"name":"or","type":"vmess","server":"138.2.90.160","port":321,"cipher":"auto","uuid":"da03979c-75fa-5858-885f-62645562dae1","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/abbhf","headers":{"host":"or.mario-web.live"}}}
+  - {"name":"ss","type":"trojan","server":"sg.mario-web.live","port":443,"udp":true,"password":"xKgW2fu2utQRlmH9J10t0n5ol75x9VjpETYO_ByMzmFjNkBu","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/tGGstr","headers":{"host":"sg.mario-web.live"}}}
+  - {"name":"chud","type":"trojan","server":"chun.mario-web.live","port":4235,"udp":true,"password":"3aRLruDgdG90VsrpWrKhhK_MmWEzLsxkn3z4DZefvwOCecWC","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/GH23AUGGJ","headers":{"host":"chun.mario-web.live"}}}
   - {"name":"chun","type":"vmess","server":"138.2.124.214","port":5231,"cipher":"auto","uuid":"a26b99f4-dd46-569e-b6d3-7673a8d69cd2","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/sdfdf","headers":{"host":"chun.mario-web.live"}}}
   - {"name":"sg","type":"vmess","server":"168.138.162.18","port":312,"cipher":"auto","uuid":"34642200-f72e-51d7-a0d5-64f90ef0749a","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/gtrdef","headers":{"host":"or.mario-web.live"}}}
 
@@ -31,7 +32,8 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - or
+      - ss
+      - chud
       - chun
       - sg
   - name: ♻️ 自动选择
@@ -40,7 +42,8 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - or
+      - ss
+      - chud
       - chun
       - sg
   - name: 🌍 国外媒体
@@ -49,7 +52,8 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - or
+      - ss
+      - chud
       - chun
       - sg
   - name: 📲 电报信息
@@ -57,7 +61,8 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - or
+      - ss
+      - chud
       - chun
       - sg
   - name: Ⓜ️ 微软服务
@@ -65,7 +70,8 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - or
+      - ss
+      - chud
       - chun
       - sg
   - name: 🍎 苹果服务
@@ -73,7 +79,8 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - or
+      - ss
+      - chud
       - chun
       - sg
   - name: 🎯 全球直连
@@ -98,7 +105,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - or
+      - ss
       - chun
 
 rules:
@@ -139,12 +146,6 @@ rules:
   - DOMAIN-SUFFIX,tendawifi.com,🎯 全球直连
   - DOMAIN-SUFFIX,zte.home,🎯 全球直连
   - DOMAIN-SUFFIX,tplogin.cn,🎯 全球直连
-# 本碎片只包含常见广告关键字、广告联盟。无副作用，放心使用
-# 广告关键词
-# 广告联盟-国内****************
-# 广告联盟-国外****************
-# 垃圾站点****************
-# 运营商广告****************
   - DOMAIN-KEYWORD,admarvel,🛑 全球拦截
   - DOMAIN-KEYWORD,admaster,🛑 全球拦截
   - DOMAIN-KEYWORD,adsage,🛑 全球拦截
