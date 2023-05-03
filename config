@@ -21,7 +21,7 @@ dns:
     - tls://dns.google:853
 
 proxies:
-  - {"name":"ss","type":"trojan","server":"sg.mario-web.live","port":443,"udp":true,"password":"xKgW2fu2utQRlmH9J10t0n5ol75x9VjpETYO_ByMzmFjNkBu","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/tGGstr","headers":{"host":"sg.mario-web.live"}}}
+  - {"name":"ss","type":"trojan","server":"sg.mario-web.live","port":443,"udp":true,"password":"xKgW2fu2utQRlmH9J10t0n5ol75x9VjpETYO_ByMzmFjNkBu","skip-cert-verify":true,
   - {"name":"chud","type":"trojan","server":"chun.mario-web.live","port":4235,"udp":true,"password":"3aRLruDgdG90VsrpWrKhhK_MmWEzLsxkn3z4DZefvwOCecWC","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/GH23AUGGJ","headers":{"host":"chun.mario-web.live"}}}
   - {"name":"chun","type":"vmess","server":"138.2.124.214","port":5231,"cipher":"auto","uuid":"a26b99f4-dd46-569e-b6d3-7673a8d69cd2","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/sdfdf","headers":{"host":"chun.mario-web.live"}}}
   - {"name":"sg","type":"vmess","server":"168.138.162.18","port":312,"cipher":"auto","uuid":"34642200-f72e-51d7-a0d5-64f90ef0749a","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/gtrdef","headers":{"host":"or.mario-web.live"}}}
