@@ -22,7 +22,7 @@ dns:
 proxies:
   - {"name":"ss","type":"trojan","server":"sg.mario-web.live","port":443,"udp":true,"password":"xKgW2fu2utQRlmH9J10t0n5ol75x9VjpETYO_ByMzmFjNkBu","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/fhSDH","headers":{"host":"sg.mario-web.live"}}}
   - {"name":"ct","type":"trojan","server":"ch.mario-web.live","port":443,"udp":true,"password":"tFjD2X1F6i9FfWp2GDU5Vbi1conuaChDKIYbw9zMFrqvMoSz","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/trelbso","headers":{"host":"ch.mario-web.live"}}}
-  - {"name":"cm","type":"vmess","server":"152.67.223.37","port":4586,"cipher":"auto","uuid":"71a7db14-1b6f-5aec-9e5d-9bd5f8beabab","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/anelebs","headers":{"host":"ch.mario-web.live"}}}
+  - {"name":"cv","type":"vmess","server":"ch.mario-web.live","port":4586,"cipher":"auto","uuid":"71a7db14-1b6f-5aec-9e5d-9bd5f8beabab","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/anelebs","headers":{"host":"ch.mario-web.live"}}}
   - {"name":"sg","type":"vmess","server":"168.138.162.18","port":312,"cipher":"auto","uuid":"34642200-f72e-51d7-a0d5-64f90ef0749a","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/gtrdef","headers":{"host":"or.mario-web.live"}}}
 
 proxy-groups:
