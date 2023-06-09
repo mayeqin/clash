@@ -33,7 +33,7 @@ proxy-groups:
       - DIRECT
       - ss
       - ct
-      - cm
+      - cv
       - sg
   - name: ♻️ 自动选择
     type: url-test
