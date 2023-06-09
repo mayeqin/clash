@@ -2,7 +2,7 @@
 # 创建者：ma.yeqin
 # 客户端：Clash
 # 创建时间：2023-05-04 20:37:04
-# 节点数量：4
+# 节点数量：6
 ####################################
 mixed-port: 7890
 allow-lan: true
@@ -23,6 +23,9 @@ proxies:
   - {"name":"ss","type":"trojan","server":"sg.mario-web.live","port":443,"udp":true,"password":"xKgW2fu2utQRlmH9J10t0n5ol75x9VjpETYO_ByMzmFjNkBu","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/fhSDH","headers":{"host":"sg.mario-web.live"}}}
   - {"name":"ov","type":"vmess","server":"168.138.184.231","port":43221,"cipher":"auto","uuid":"7529ee5d-8359-49ef-e70d-5d2e357cb112","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/dfgfh","headers":{"host":","}}}
   - {"name":"sg","type":"vmess","server":"168.138.162.18","port":312,"cipher":"auto","uuid":"34642200-f72e-51d7-a0d5-64f90ef0749a","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/gtrdef","headers":{"host":"or.mario-web.live"}}}
+  - {"name":"chud","type":"vmess","server":"152.67.196.71","port":4680,"cipher":"auto","uuid":"28051bfd-4c86-4643-8af8-459fc4267943","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/fhgh4","headers":{"host":","}}}
+  - {"name":"cv","type":"vmess","server":"ch.mario-web.live","port":4581,"cipher":"auto","uuid":"83cec14b-6bde-5a36-ae02-0e0dc9e6510e","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/tjannocke","headers":{"host":"ch.mario-web.live"}}}
+  - {"name":"ct","type":"trojan","server":"ch.mario-web.live","port":443,"udp":true,"password":"BvGbfrVnsLlQnez3cx43IDAGPPBAPFMveSDF78dCbgbF0VoW","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/anpeet","headers":{"host":"ch.mario-web.live"}}}
 
 proxy-groups:
   - name: 🚀 节点选择
@@ -33,6 +36,9 @@ proxy-groups:
       - ss
       - ov
       - sg
+      - chud
+      - cv
+      - ct
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -42,6 +48,9 @@ proxy-groups:
       - ss
       - ov
       - sg
+      - chud
+      - cv
+      - ct
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -51,6 +60,9 @@ proxy-groups:
       - ss
       - ov
       - sg
+      - chud
+      - cv
+      - ct
   - name: 📲 电报信息
     type: select
     proxies:
@@ -58,7 +70,10 @@ proxy-groups:
       - 🎯 全球直连
       - ss
       - ov
-      - sg
+      - sg 
+      - chud
+      - cv
+      - ct
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -67,6 +82,9 @@ proxy-groups:
       - ss
       - ov
       - sg
+      - chud
+      - cv
+      - ct
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -75,6 +93,9 @@ proxy-groups:
       - ss
       - ov
       - sg
+      - chud
+      - cv
+      - ct
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -100,6 +121,9 @@ proxy-groups:
       - ss
       - ov
       - sg
+      - chud
+      - cv
+      - ct
 
 rules:
 # 本地/局域网地址
