@@ -21,10 +21,10 @@ dns:
 
 proxies:
   - {"name":"ss","type":"trojan","server":"sg.mario-web.live","port":443,"udp":true,"password":"xKgW2fu2utQRlmH9J10t0n5ol75x9VjpETYO_ByMzmFjNkBu","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/fhSDH","headers":{"host":"sg.mario-web.live"}}}
-  - {"name":"ov","type":"vmess","server":"168.138.184.231","port":432,"cipher":"auto","uuid":"7529ee5d-8359-49ef-e70d-5d2e357cb112","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/dfgfh","headers":{"host":","}}}
-  - {"name":"sg","type":"vmess","server":"168.138.162.18","port":312,"cipher":"auto","uuid":"34642200-f72e-51d7-a0d5-64f90ef0749a","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/gtrdef","headers":{"host":"or.mario-web.live"}}}
-  - {"name":"chud","type":"vmess","server":"152.67.196.71","port":468,"cipher":"auto","uuid":"28051bfd-4c86-4643-8af8-459fc4267943","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/fhgh4","headers":{"host":","}}}
-  - {"name":"ch","type":"vmess","server":"ch.mario-web.live","port":458,"cipher":"auto","uuid":"83cec14b-6bde-5a36-ae02-0e0dc9e6510e","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/tjannocke","headers":{"host":"ch.mario-web.live"}}}
+  - {"name":"om","type":"vmess","server":"168.138.184.231","port":51234,"cipher":"auto","uuid":"7529ee5d-8359-49ef-e70d-5d2e357cb112","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/dfgfh","headers":{"host":","}}}
+  - {"name":"sg","type":"vmess","server":"sg.mario-web.live","port":5521,"cipher":"auto","uuid":"34642200-f72e-51d7-a0d5-64f90ef0749a","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/gtrdef","headers":{"host":"sg.mario-web.live"}}}
+  - {"name":"chum","type":"vmess","server":"129.154.55.195","port":52314,"cipher":"auto","uuid":"28051bfd-4c86-4643-8af8-459fc4267943","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/fhgh4","headers":{"host":","}}}
+  - {"name":"ch","type":"vmess","server":"ch.mario-web.live","port":5421,"cipher":"auto","uuid":"83cec14b-6bde-5a36-ae02-0e0dc9e6510e","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/tjannocke","headers":{"host":"ch.mario-web.live"}}}
   - {"name":"ct","type":"trojan","server":"ch.mario-web.live","port":443,"udp":true,"password":"BvGbfrVnsLlQnez3cx43IDAGPPBAPFMveSDF78dCbgbF0VoW","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/anpeet","headers":{"host":"ch.mario-web.live"}}}
 
 proxy-groups:
@@ -34,9 +34,9 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - ss
-      - ov
+      - om
       - sg
-      - chud
+      - chum
       - ch
       - ct
   - name: ♻️ 自动选择
@@ -46,9 +46,9 @@ proxy-groups:
     tolerance: 50
     proxies:
       - ss
-      - ov
+      - om
       - sg
-      - chud
+      - chum
       - ch
       - ct
   - name: 🌍 国外媒体
@@ -58,9 +58,9 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - ss
-      - ov
+      - om
       - sg
-      - chud
+      - chum
       - ch
       - ct
   - name: 📲 电报信息
@@ -69,9 +69,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ss
-      - ov
-      - sg 
-      - chud
+      - om
+      - sg
+      - chum
       - ch
       - ct
   - name: Ⓜ️ 微软服务
@@ -80,9 +80,9 @@ proxy-groups:
       - 🎯 全球直连
       - 🚀 节点选择
       - ss
-      - ov
+      - om
       - sg
-      - chud
+      - chum
       - ch
       - ct
   - name: 🍎 苹果服务
@@ -91,9 +91,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ss
-      - ov
+      - om
       - sg
-      - chud
+      - chum
       - ch
       - ct
   - name: 🎯 全球直连
@@ -119,9 +119,9 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - ss
-      - ov
+      - om
       - sg
-      - chud
+      - chum
       - ch
       - ct
 
