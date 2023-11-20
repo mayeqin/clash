@@ -1,7 +1,7 @@
 ####################################
 # 创建者：ma.yeqin
 # 客户端：Clash
-# 创建时间：2023-05-04 20:37:04
+# 创建时间：2023-11-20 20:37:04
 # 节点数量：6
 ####################################
 mixed-port: 7890
@@ -20,10 +20,9 @@ dns:
     - tls://dns.google:853
 
 proxies:
-  - {"name":"ss","type":"trojan","server":"sg.mario-web.live","port":443,"udp":true,"password":"xKgW2fu2utQRlmH9J10t0n5ol75x9VjpETYO_ByMzmFjNkBu","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/fhSDH","headers":{"host":"sg.mario-web.live"}}}
-  - {"name":"om","type":"vmess","server":"168.138.184.231","port":51234,"cipher":"auto","uuid":"7529ee5d-8359-49ef-e70d-5d2e357cb112","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/dfgfh","headers":{"host":","}}}
-  - {"name":"sg","type":"vmess","server":"sg.mario-web.live","port":3316,"cipher":"auto","uuid":"34642200-f72e-51d7-a0d5-64f90ef0749a","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/56dggs","headers":{"host":"sg.mario-web.live"}}}
-  - {"name":"chum","type":"vmess","server":"129.154.55.195","port":52314,"cipher":"auto","uuid":"28051bfd-4c86-4643-8af8-459fc4267943","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/fhgh4","headers":{"host":","}}}
+  - {"name":"om","type":"vless","server":"168.138.184.231","port":4652,"uuid":"d70486ad-b54b-47fa-f7fc-39710f84dc3a","tls":false,"network":"ws","ws-opts":{"path":"/dfgfh"}}
+  - {"name":"chum","type":"vless","server":"129.154.55.195","port":4632,"uuid":"14430c78-ac5d-4fe2-ba7b-eaecd1a53580","tls":false,"network":"ws","ws-opts":{"path":"/458khgy"}}
+  - {"name":"ss","type":"vless","server":"158.178.241.175","port":4425,"uuid":"a9375452-9814-4614-ac48-df47a55b59ce","tls":false,"network":"ws","ws-opts":{"path":"/dfg44"}}
   - {"name":"ch","type":"vmess","server":"ch.mario-web.live","port":5421,"cipher":"auto","uuid":"83cec14b-6bde-5a36-ae02-0e0dc9e6510e","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/tjannocke","headers":{"host":"ch.mario-web.live"}}}
   - {"name":"ct","type":"trojan","server":"ch.mario-web.live","port":443,"udp":true,"password":"BvGbfrVnsLlQnez3cx43IDAGPPBAPFMveSDF78dCbgbF0VoW","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/anpeet","headers":{"host":"ch.mario-web.live"}}}
 
@@ -33,10 +32,9 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - ss
       - om
-      - sg
       - chum
+      - ss
       - ch
       - ct
   - name: ♻️ 自动选择
@@ -45,10 +43,9 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - ss
       - om
-      - sg
       - chum
+      - ss
       - ch
       - ct
   - name: 🌍 国外媒体
@@ -57,10 +54,9 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - ss
       - om
-      - sg
       - chum
+      - ss
       - ch
       - ct
   - name: 📲 电报信息
@@ -68,10 +64,9 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - ss
       - om
-      - sg
       - chum
+      - ss
       - ch
       - ct
   - name: Ⓜ️ 微软服务
@@ -79,10 +74,9 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - ss
       - om
-      - sg
       - chum
+      - ss
       - ch
       - ct
   - name: 🍎 苹果服务
@@ -90,10 +84,9 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - ss
       - om
-      - sg
       - chum
+      - ss
       - ch
       - ct
   - name: 🎯 全球直连
@@ -118,10 +111,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - ss
       - om
-      - sg
       - chum
+      - ss
       - ch
       - ct
 
