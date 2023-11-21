@@ -20,7 +20,7 @@ dns:
     - tls://dns.google:853
 
 proxies:
-  - {"name":"om","type":"vless","server":"168.138.184.231","port":22255,"uuid":"723c425d-cb2e-4311-e15d-2b2553525349","tls":false,"network":"ws","ws-opts":{"path":"/fgf45h"}}
+  - {"name":"or","type":"vless","server":"168.138.184.231","port":22255,"uuid":"723c425d-cb2e-4311-e15d-2b2553525349","tls":false,"network":"ws","ws-opts":{"path":"/fgf45h"}}
   - {"name":"chum","type":"vless","server":"129.154.55.195","port":4632,"uuid":"14430c78-ac5d-4fe2-ba7b-eaecd1a53580","tls":false,"network":"ws","ws-opts":{"path":"/458khgy"}}
   - {"name":"ss","type":"vless","server":"158.178.241.175","port":4425,"uuid":"a9375452-9814-4614-ac48-df47a55b59ce","tls":false,"network":"ws","ws-opts":{"path":"/dfg44"}}
   - {"name":"ch","type":"vless","server":"152.69.230.216","port":26627,"uuid":"76d3b541-e0dd-4f43-85c9-b08f13c090d7","tls":false,"network":"ws","ws-opts":{"path":"//dfgfd"}}
