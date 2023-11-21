@@ -23,8 +23,7 @@ proxies:
   - {"name":"om","type":"vless","server":"168.138.184.231","port":4652,"uuid":"d70486ad-b54b-47fa-f7fc-39710f84dc3a","tls":false,"network":"ws","ws-opts":{"path":"/dfgfh"}}
   - {"name":"chum","type":"vless","server":"129.154.55.195","port":4632,"uuid":"14430c78-ac5d-4fe2-ba7b-eaecd1a53580","tls":false,"network":"ws","ws-opts":{"path":"/458khgy"}}
   - {"name":"ss","type":"vless","server":"158.178.241.175","port":4425,"uuid":"a9375452-9814-4614-ac48-df47a55b59ce","tls":false,"network":"ws","ws-opts":{"path":"/dfg44"}}
-  - {"name":"ch","type":"vmess","server":"ch.mario-web.live","port":5421,"cipher":"auto","uuid":"83cec14b-6bde-5a36-ae02-0e0dc9e6510e","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/tjannocke","headers":{"host":"ch.mario-web.live"}}}
-  - {"name":"ct","type":"trojan","server":"ch.mario-web.live","port":443,"udp":true,"password":"BvGbfrVnsLlQnez3cx43IDAGPPBAPFMveSDF78dCbgbF0VoW","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/anpeet","headers":{"host":"ch.mario-web.live"}}}
+  - {"name":"ch","type":"vless","server":"152.69.230.216","port":26627,"uuid":"76d3b541-e0dd-4f43-85c9-b08f13c090d7","tls":false,"network":"ws","ws-opts":{"path":"//dfgfd"}}
 
 proxy-groups:
   - name: 🚀 节点选择
@@ -36,7 +35,6 @@ proxy-groups:
       - chum
       - ss
       - ch
-      - ct
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -47,7 +45,6 @@ proxy-groups:
       - chum
       - ss
       - ch
-      - ct
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -58,7 +55,6 @@ proxy-groups:
       - chum
       - ss
       - ch
-      - ct
   - name: 📲 电报信息
     type: select
     proxies:
@@ -68,7 +64,6 @@ proxy-groups:
       - chum
       - ss
       - ch
-      - ct
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -78,7 +73,6 @@ proxy-groups:
       - chum
       - ss
       - ch
-      - ct
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -88,7 +82,6 @@ proxy-groups:
       - chum
       - ss
       - ch
-      - ct
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -115,7 +108,6 @@ proxy-groups:
       - chum
       - ss
       - ch
-      - ct
 
 rules:
 # 本地/局域网地址
