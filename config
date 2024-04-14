@@ -23,7 +23,7 @@ proxies:
   - {"name":"oml","type":"vless","server":"158.178.236.188","port":39101,"uuid":"02f68b00-7a8a-4a66-b1ad-77f635e8526e","tls":false,"network":"ws","ws-opts":{"path":"/fgfgh"}}
   - {"name":"ol","type":"vless","server":"168.138.165.147","port":45500,"uuid":"a450063c-3cfc-4bb0-cd58-e88ff161b873","tls":false,"network":"ws","ws-opts":{"path":"/gfgfdf"}}
   - {"name":"cl","type":"vless","server":"213.35.119.221","port":41819,"uuid":"e5bcd38d-6c2f-4565-cfa9-b8137a98323b","tls":false,"network":"ws","ws-opts":{"path":"/xvfgf"}}
-  - {"name":"a","type":"vless","server":"213.35.105.130","port":5324,"uuid":"d6d494de-14cc-4bcb-905d-6bf310755e79","tls":false,"network":"ws","ws-opts":{"path":"/hkhkh"}}
+  - {"name":"aml","type":"vless","server":"213.35.105.130","port":5324,"uuid":"d6d494de-14cc-4bcb-905d-6bf310755e79","tls":false,"network":"ws","ws-opts":{"path":"/hkhkh"}}
 
 proxy-groups:
   - name: 🚀 节点选择
